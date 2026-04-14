@@ -1,0 +1,48 @@
+
+/* TABLET */
+@media (min-width: 601px) {
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+    }
+
+    .hero {
+        height: 80vh;
+        max-height: 600px;
+    }
+
+    .feature__layout {
+        grid-template-columns: 55% 45%;
+    }
+
+    .feature__layout.reverse {
+        grid-template-columns: 45% 55%;
+    }
+
+    .feature__layout.reverse {
+        order: 2;
+    }
+
+    /* grid */
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));} 
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));} 
+    .gallery { grid-template-columns: repeat(3, 1fr);}
+
+    .page-hero {
+        height: unset;
+    }
+
+    .footer__inner, .feature-card-container {
+        flex-direction: row;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .gallery { grid-template-columns: repeat(4, 1fr);} 
+}

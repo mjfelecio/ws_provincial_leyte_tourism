@@ -1,0 +1,250 @@
+.nav {
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    height: var(--nav-height);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.nav__inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--space-md);
+}
+
+.nav__brand, .nav__toggle {
+    color: var(--text-light);
+    font-size: var(--text-2xl);
+}
+
+.nav__links {
+    position: absolute;
+    top: var(--nav-height);
+    right: 0;
+    left: 0;
+    background-color: var(--bg-dark);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.nav.visible .nav__links {
+    display: flex;
+}
+
+.nav__link {
+    color: var(--text-light);
+    transition: color var(--transition);
+}
+
+.nav__link:hover, .nav__link.active {
+    color: var(--accent);
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-hero {
+    padding: var(--space-2xl);
+}
+
+.hero::before {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 20, 25, 0.5);
+    content: '';
+}
+
+.hero__content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    max-width: 750px;
+    padding: 0 var(--space-md);
+}
+
+.hero__content h1 {
+    color: var(--text-light);
+    margin-bottom: var(--space-sm);
+}
+
+.hero__content p {
+    color: var(--text-light);
+    margin-bottom: var(--space-sm);
+}
+
+/* BUTTONS */
+.btn {
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    transition: color var(--transition), transform var(--transition);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+    width: fit-content;
+    color: var(--text-light);
+    font-size: var(--text-sm);
+}
+
+.btn-sm {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-xs);
+}
+
+.btn-square {
+    border-radius: var(--radius-md);
+}
+
+.btn:hover {
+    color: var(--text-light);
+    transform: translateY(2px);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--bg);
+    color: var(--text-light);
+}
+
+.btn-outline:hover {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+}
+
+
+/* CARD */
+.card {
+    background-color: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.news-card {
+    border-left: 4px solid var(--accent);
+}
+
+.card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.card:hover img {
+    transform: scale(1.008);
+}
+
+.card__content {
+    padding: var(--space-md);
+}
+
+.card__content span {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+}
+
+.card__content a {
+    color: var(--accent);
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.gallery-item {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.gallery-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* TTTTTTTTTTTTTTEEEEEEEEEEEEEEEEEEEMPPPPP */
+.gallery-item__caption {
+    display: none;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--bg-dark);
+}
+
+.footer__inner {
+    padding: var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-direction: column;
+}
+
+.footer__copy-section {
+    color: var(--text-light);
+    font-family: var(--font-heading);
+}
+
+.footer__seal-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.footer__seal-section .seal {
+    aspect-ratio: 1/1;
+    max-height: 40px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: var(--rounded-full);
+}
+
+.footer__seal-section .seal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.link {
+    color: lightseagreen;
+    text-decoration: underline;
+    cursor: pointer;
+}
